@@ -1,0 +1,8 @@
+<thlogic>
+    <attr sel="#headId" th:replace="~{fragments/head::headFragment}"/>
+    <attr sel="#playId"
+          th:href="@{__${T(com.endlesspowerskills.util.GameMappings).PLAY}__}"
+          th:text="#{game.play}"/>
+    <attr sel="#footerId" th:replace="~{fragments/footer::footerFragment}"/>
+    <attr sel="#gameTitle" th:text="#{game.welcome.title}"/>
+</thlogic>

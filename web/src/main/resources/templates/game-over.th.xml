@@ -1,0 +1,16 @@
+<thlogic>
+    <attr sel="#headId" th:replace="~{fragments/head::headFragment}"/>
+    <attr sel="#gameTitle" th:text="#{game.title}"/>
+    <attr sel="#gameOver" th:text="#{game.game.over}"/>
+    <attr sel="#resultMessage" th:text="${__${T(com.endlesspowerskills.util.AttributeNames).RESULT_MESSAGE}__}"/>
+    <attr sel="#restartId"
+          th:href="@{__${T(com.endlesspowerskills.util.GameMappings).RESTART}__}"
+          th:text="#{game.restart}"/>
+    <attr sel="#homeId"
+          th:href="@{__${T(com.endlesspowerskills.util.GameMappings).HOME}__}"
+          th:text="#{game.home}"/>
+    <attr sel="#footerId" th:replace="~{fragments/footer::footerFragment}"/>
+    <attr sel="#diceId"
+          th:each="d : ${__${T(com.endlesspowerskills.util.AttributeNames).DICE}__}"
+          th:text="${__${d}__}"/>
+</thlogic>

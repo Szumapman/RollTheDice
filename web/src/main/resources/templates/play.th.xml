@@ -1,0 +1,10 @@
+<thlogic>
+    <attr sel="#headId" th:replace="~{fragments/head::headFragment}"/>
+    <attr sel="#mainMessage" th:text="${__${T(com.endlesspowerskills.util.AttributeNames).MAIN_MESSAGE}__}"/>
+    <attr sel="#resultMessage" th:text="${__${T(com.endlesspowerskills.util.AttributeNames).RESULT_MESSAGE}__}"/>
+    <attr sel="#playId" th:action="@{__${T(com.endlesspowerskills.util.GameMappings).PLAY}__}"/>
+    <attr sel="#footerId" th:replace="~{fragments/footer::footerFragment}"/>
+    <attr sel="#gameTitle" th:text="#{game.title}"/>
+    <attr sel="#enterGuess" th:text="#{game.enter.guess}"/>
+    <attr sel="#submit" th:value="#{game.submit}"/>
+</thlogic>
